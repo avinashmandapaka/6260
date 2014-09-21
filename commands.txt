@@ -1,0 +1,9 @@
+--check status
+git status
+-- checkout 
+git pull
+-- add/update files
+git status
+git add <filename>
+git commit -m "<your message>"
+git push
