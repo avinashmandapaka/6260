@@ -1,0 +1,195 @@
+<!DOCTYPE html [
+    <!ENTITY nbsp "&#160;">
+    <!ENTITY bull "&#8226;">
+    <!ENTITY copy "&#169;">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<f:facet name="first">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport"
+			content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="shortcut icon" type="image/png"
+			href="#{request.contextPath}/resources/main/images/favicon.png" />
+	</f:facet>
+
+	<title>PrimeFaces ShowCase</title>
+	<h:outputStylesheet name="main/css/showcase.css" />
+	<h:outputStylesheet name="main/css/perfect-scrollbar.css" />
+	<h:outputStylesheet name="main/css/sh.css" />
+	<h:outputScript name="jquery/jquery.js" library="primefaces" />
+	<h:outputScript name="jquery/jquery-plugins.js" library="primefaces" />
+	<h:outputScript name="main/js/perfect-scrollbar.js" />
+	<h:outputScript name="main/js/showcase.js" />
+	<ui:insert name="head" />
+</h:head>
+
+<h:body>
+
+	<!-- PC CONTENT STARTS HERE-->
+	<div class="PC">
+
+		<div id="MENUSIDE">
+			<div id="MENUSIDEindent">
+				<span id="LOGO" class="bordersOfMenuSide"> <h:graphicImage
+						name="main/images/logo.svg" /> <h:graphicImage
+						styleClass="hiddenIcons" name="main/images/logoBlue.svg" />
+					<div id="hiddenLogoTextEl" class="hiddenLogoText">
+						<span class="dispBlock logoDarkText fontSize30">PrimeFaces</span>
+						<span class="dispBlock logoBlueText fontSize30 mediumFont">SHOWCASE</span>
+					</div>
+				</span> <span class="emptyBox"></span>
+				<div class="MenuSideMainLink bordersOfMenuSide">
+					<h:graphicImage name="main/images/zoom.svg" class="zoomIcon" />
+					<input id="menuSearch" type="text" placeholder="Search Menu"
+						class="mediumFont fontSize14 mustClose searchInput" />
+				</div>
+				<span class="MenuSideMainLink bordersOfMenuSide"
+					onclick="Showcase.openSubMenu(this);"><h:graphicImage
+						name="main/images/mono/ajaxCore.svg" />
+					<h:graphicImage styleClass="hiddenIcons"
+						name="main/images/mono/ajaxCoreBlue.svg" /><span
+					class="MainLinkText">Ajax Core</span></span>
+				<div class="SubMenuLinkContainer">
+					<a class="SubMenuLink"
+						href="#{request.contextPath}/ui/ajax/basic.xhtml">&bull; Basic</a>
+				</div>
+
+				<span class="MenuSideMainLink bordersOfMenuSide"
+					onclick="Showcase.openSubMenu(this);"><h:graphicImage
+						name="main/images/mono/input.svg" />
+					<h:graphicImage styleClass="hiddenIcons"
+						name="main/images/mono/inputBlue.svg" /><span
+					class="MainLinkText">Input</span></span>
+				<div class="SubMenuLinkContainer">
+					<a class="SubMenuLink"
+						href="#{request.contextPath}/ui/input/autoComplete.xhtml">&bull;
+						AutoComplete</a>
+				</div>
+				<span class="MenuSideMainLink bordersOfMenuSide"
+					onclick="Showcase.openSubMenu(this);"><h:graphicImage
+						name="main/images/mono/button.svg" />
+					<h:graphicImage styleClass="hiddenIcons"
+						name="main/images/mono/buttonBlue.svg" /><span
+					class="MainLinkText">Button</span></span>
+				<div class="SubMenuLinkContainer">
+					<a class="SubMenuLink"
+						href="#{request.contextPath}/ui/button/button.xhtml">&bull;
+						Button</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="CONTENTSIDE">
+			<div id="CONTENTSIDEindent">
+
+				<!-- header bar start-->
+				<div class="ContentSideSections" id="PFTopLinksCover"
+					style="height: 60px;">
+					<a id="LOGOTEXTSIDE" href="#{request.contextPath}/index.xhtml">
+						<span class="dispBlock logoDarkText fontSize30">Student</span> <span
+						class="dispBlock logoBlueText fontSize30 mediumFont">Portal System
+							</span>
+					</a> <a href="#{request.contextPath}/mobile/index.xhtml"
+						class="PFTopLinks floatRight boldFont"><h:graphicImage
+							name="main/images/pfMobile.svg" /><span class="PFGrayText">PF</span><span
+						class="PFDarkText">Mobile</span></a> <span
+						class="PFTopLinks floatRight boldFont cursorPointer"
+						id="themeSwitcher"> <h:form>
+							<h:graphicImage name="main/images/themeswitcher.svg" />
+							<span class="PFGrayText">PF</span>
+							<span class="PFDarkText">Themes</span>
+							<div id="GlobalThemeSwitcher" class="navOverlay">
+								<ui:repeat value="#{themeSwitcherView.themes}" var="theme">
+									<a href="#" data-theme="#{theme.name}"><span
+										class="ui-theme ui-theme-#{theme}"></span><span
+										class="ui-text">#{theme.displayName}</span></a>
+								</ui:repeat>
+							</div>
+							<p:remoteCommand name="changeTheme"
+								actionListener="#{guestPreferences.changeTheme}" />
+						</h:form>
+					</span>
+
+					<div class="mobileLogoCover">
+						<h:graphicImage name="main/images/logoBlue.svg"
+							style="height:40px;" styleClass="floatLeft marginRight10" />
+						<span class="dispBlock logoDarkText fontSize16 floatLeft">PrimeFaces
+							<span class="dispBlock logoBlueText fontSize18 mediumFont">SHOWCASE</span>
+						</span>
+					</div>
+				</div>
+				<!-- header bar end-->
+
+				<ui:insert name="content">
+					<div class="ContentSideSections">
+						<div class="Content100 overHidden TextShadow">
+							<span
+								class="fontSize30 TextShadow orange mediumFont marginBottom20 dispBlock"><ui:insert
+									name="title" /></span> <span class="defaultText dispTable"><ui:insert
+									name="description" /> </span>
+						</div>
+					</div>
+
+					<div class="ContentSideSections Implementation"
+						style="background-color: #dfe4e6;">
+						<ui:insert name="implementation" />
+					</div>
+
+					<div id="SourceContentSide" class="ContentSideSections Source">
+						<div class="Content100 overHidden TextShadow">
+							<span class="defaultText"> <span
+								class="fontSize18 logoBlueText"> <ui:insert name="source" />
+							</span>
+							</span>
+						</div>
+					</div>
+
+				</ui:insert>
+
+				<!-- footer start-->
+				<div class="ContentSideSections">
+					<span class="floatLeft fontSize14 gray"><a
+						href="http://www.primetek.com.tr">PrimeTek</a>, Copyright &copy;
+						2014<br />All rights reserved.</span> <span
+						class="floatRight fontSize14 gray">Running
+						#{build.primefacesVersion} on #{build.jsfVersion}.</span>
+					<div style="clear: both" />
+				</div>
+				<!-- footer end-->
+
+			</div>
+		</div>
+
+	</div>
+	<!-- PC CONTENT END-->
+
+	<ui:insert name="status">
+		<p:ajaxStatus
+			style="width:64px;height:64px;position:fixed;right:5px;bottom:5px">
+			<f:facet name="start">
+				<p:graphicImage name="main/images/loader.gif" />
+			</f:facet>
+
+			<f:facet name="complete">
+				<h:outputText value="" />
+			</f:facet>
+		</p:ajaxStatus>
+	</ui:insert>
+
+	<ui:insert name="highlight">
+		<script language="javascript"
+			src="#{request.contextPath}/resources/main/js/sh.js"></script>
+		<script language="javascript">
+			SyntaxHighlighter.all();
+		</script>
+	</ui:insert>
+
+	<ui:insert name="body"></ui:insert>
+</h:body>
+</html>
