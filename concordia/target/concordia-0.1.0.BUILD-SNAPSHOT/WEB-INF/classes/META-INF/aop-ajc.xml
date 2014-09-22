@@ -1,0 +1,17 @@
+<aspectj>
+<aspects>
+<aspect name="encs.concordia.jsf.converter.CustomerConverter_Roo_Converter"/>
+<aspect name="encs.concordia.jsf.converter.CustomerConverter_Roo_Configurable"/>
+<aspect name="encs.concordia.Customer_Roo_ToString"/>
+<aspect name="encs.concordia.Customer_Roo_JavaBean"/>
+<aspect name="encs.concordia.jsf.CustomerBean_Roo_ManagedBean"/>
+<aspect name="encs.concordia.Customer_Roo_Jpa_ActiveRecord"/>
+<aspect name="encs.concordia.Customer_Roo_Configurable"/>
+<aspect name="encs.concordia.jsf.ApplicationBean_Roo_Configurable"/>
+<aspect name="encs.concordia.jsf.ApplicationBean_Roo_ApplicationBean"/>
+<aspect name="encs.concordia.Customer_Roo_Jpa_Entity"/>
+<aspect name="encs.concordia.jsf.CustomerBean_Roo_Serializable"/>
+<aspect name="encs.concordia.jsf.CustomerBean_Roo_Configurable"/>
+</aspects>
+</aspectj>
+

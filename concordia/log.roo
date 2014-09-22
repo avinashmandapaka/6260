@@ -1,0 +1,9 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-09-21 20:44:32
+project --topLevelPackage encs.concordia
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity jpa --class encs.concordia.Customer
+field string --fieldName name
+web jsf setup --implementation ORACLE_MOJARRA --library PRIMEFACES --theme REDMOND 
+web jsf all --package ~.jsf
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-09-21 20:46:48
