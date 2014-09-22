@@ -1,0 +1,5 @@
+#surefire
+#Mon Sep 22 01:54:41 EDT 2014
+user.dir=/home/kunta/DEVELOPMENT/projects/pageTemplate
+localRepository=/home/kunta/.m2/repository
+basedir=/home/kunta/DEVELOPMENT/projects/pageTemplate

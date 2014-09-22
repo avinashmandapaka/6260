@@ -51,9 +51,8 @@
 				</div>
 				<span class="MenuSideMainLink bordersOfMenuSide"
 					onclick="Showcase.openSubMenu(this);"><h:graphicImage
-						name="main/images/mono/ajaxCore.svg" />
-					<h:graphicImage styleClass="hiddenIcons"
-						name="main/images/mono/ajaxCoreBlue.svg" /><span
+						name="main/images/mono/ajaxCore.svg" /> <h:graphicImage
+						styleClass="hiddenIcons" name="main/images/mono/ajaxCoreBlue.svg" /><span
 					class="MainLinkText">Ajax Core</span></span>
 				<div class="SubMenuLinkContainer">
 					<a class="SubMenuLink"
@@ -62,9 +61,8 @@
 
 				<span class="MenuSideMainLink bordersOfMenuSide"
 					onclick="Showcase.openSubMenu(this);"><h:graphicImage
-						name="main/images/mono/input.svg" />
-					<h:graphicImage styleClass="hiddenIcons"
-						name="main/images/mono/inputBlue.svg" /><span
+						name="main/images/mono/input.svg" /> <h:graphicImage
+						styleClass="hiddenIcons" name="main/images/mono/inputBlue.svg" /><span
 					class="MainLinkText">Input</span></span>
 				<div class="SubMenuLinkContainer">
 					<a class="SubMenuLink"
@@ -73,9 +71,8 @@
 				</div>
 				<span class="MenuSideMainLink bordersOfMenuSide"
 					onclick="Showcase.openSubMenu(this);"><h:graphicImage
-						name="main/images/mono/button.svg" />
-					<h:graphicImage styleClass="hiddenIcons"
-						name="main/images/mono/buttonBlue.svg" /><span
+						name="main/images/mono/button.svg" /> <h:graphicImage
+						styleClass="hiddenIcons" name="main/images/mono/buttonBlue.svg" /><span
 					class="MainLinkText">Button</span></span>
 				<div class="SubMenuLinkContainer">
 					<a class="SubMenuLink"
@@ -93,28 +90,12 @@
 					style="height: 60px;">
 					<a id="LOGOTEXTSIDE" href="#{request.contextPath}/index.xhtml">
 						<span class="dispBlock logoDarkText fontSize30">Student</span> <span
-						class="dispBlock logoBlueText fontSize30 mediumFont">Portal System
-							</span>
+						class="dispBlock logoBlueText fontSize30 mediumFont">Portal
+							System </span>
 					</a> <a href="#{request.contextPath}/mobile/index.xhtml"
 						class="PFTopLinks floatRight boldFont"><h:graphicImage
 							name="main/images/pfMobile.svg" /><span class="PFGrayText">PF</span><span
-						class="PFDarkText">Mobile</span></a> <span
-						class="PFTopLinks floatRight boldFont cursorPointer"
-						id="themeSwitcher"> <h:form>
-							<h:graphicImage name="main/images/themeswitcher.svg" />
-							<span class="PFGrayText">PF</span>
-							<span class="PFDarkText">Themes</span>
-							<div id="GlobalThemeSwitcher" class="navOverlay">
-								<ui:repeat value="#{themeSwitcherView.themes}" var="theme">
-									<a href="#" data-theme="#{theme.name}"><span
-										class="ui-theme ui-theme-#{theme}"></span><span
-										class="ui-text">#{theme.displayName}</span></a>
-								</ui:repeat>
-							</div>
-							<p:remoteCommand name="changeTheme"
-								actionListener="#{guestPreferences.changeTheme}" />
-						</h:form>
-					</span>
+						class="PFDarkText">Mobile</span></a>
 
 					<div class="mobileLogoCover">
 						<h:graphicImage name="main/images/logoBlue.svg"
